@@ -1,6 +1,3 @@
-// option one: rock, paper, scissors in a list; random number between 0-2
-// option two: 
-
 function getComputerChoice() {
     const rockGame = ["Rock", "Paper", "Scissors"];
     const random = rockGame[Math.floor(Math.random() * rockGame.length)];
@@ -42,6 +39,3 @@ function game () {
 }
 
 game()
-
-// rock beats scissors, paper beats rock, scissors beat paper 
-
