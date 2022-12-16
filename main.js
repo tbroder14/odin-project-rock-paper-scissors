@@ -7,10 +7,6 @@ function getComputerChoice() {
     let allLetters = random.toLowerCase()
     return allLetters;
 }
-const computerSelection = getComputerChoice();
-console.log(computerSelection);
-const playerSelection = "rock";
-console.log(playerSelection);
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
@@ -27,16 +23,25 @@ function playRound(playerSelection, computerSelection) {
         return "You lose!";
     } else if (playerSelection == "paper" && computerSelection == "scissors") {
         return "You lose!"; 
+    } else if (playerSelection == "scissors" && computerSelection == "rock") {
+        return "You lose!";     
     } else {
-        return "Nice try!";
+        return "Nice try! You probably misspelled something or entered an incorrect answer";
     }
 }
-console.log(playRound(playerSelection, computerSelection));
 
 function game () {
-
-
+    for (let i = 0; i < 5; i++) {
+        const computerSelection = getComputerChoice();
+        const playerSelection = prompt("Enter either rock, paper, scissors.");
+        console.log(playerSelection);
+        console.log(computerSelection);
+        console.log(playRound(playerSelection, computerSelection))  
+        
+    }
 }
+
+game()
 
 // rock beats scissors, paper beats rock, scissors beat paper 
 
